@@ -1,39 +1,66 @@
-{% extends 'blog/base.html' %}
-{% load static %}
-
 <html>
-    <head>
-	<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-        <title>Django Girls blog</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-    </head>
-    <body>
-	<div class="page-header">
-    		<h1><a href="/">Django Girls Blog</a></h1>
-	</div>
-
-        <div>
-            <h1><a href="/">Django Girls Blog</a></h1>
-        </div>
-
-        <div class="content container">
-    <div class="row">
-        <div class="col-md-8">
-	{% block content %}
-            {% for post in posts %}
-                <div class="post">
-        <div class="date">
-            {{ post.published_date }}
-        </div>
-        <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-        <p>{{ post.text|linebreaksbr }}</p>
-    </div>
-            {% endfor %}
-	{% endblock %}
-        </div>
-    </div>
+<head>
+<meta name="google-site-verification" 
+content="NzQsqy9h7dRYIey_mF2Y0uq7qUfseN5XmWEYbwBUj6g" />
+<style>
+html{
+	background-color:red;
+}
+body{
+	margin:0px 100px 0px 100px;
+	background-color:#4AC2DB;
+}
+h1{
+	font-size:50px;
+	color:black;
+	letter-spacing:0.5px;
+	text-align:center;
+	text-decoration:underline;
+	word-spacing:5px;
+}
+h2{
+	font-size:37px
+	text-decoration:underline;
+	text-align:left;
+	word-spacing:2px;
+}
+div{
+	font-size:15px;
+	text-align:left;
+	
+}
+a:link, a:visited{
+	background-color:green;
+	color:white;
+	padding:14px 25px;
+	text-align:center;
+	text-decoration:none;
+	display:block;
+	border-radius:100px;
+}
+a:hover,a:active{
+	background-color:yellow;
+}
+	
+</style>
+<body>
+<h1>
+WELCOME TO IASAO!
+</H1>
+<h2>
+WHAT WE DO?
+</h2>
+<div>
+<b>
+we do research in the field of chemistery and physics.we need more people to join our community.<br>
+the main purpose of our community is to reveal some secret that noone ever found.</b>
 </div>
-    </body>
+
+<h2>
+HAVE A DOUBT?
+</h2>
+<div><b>if you have any doubt in chemistery an physics just click down the button below<b></div>
+<b><a href="default.asp" target="_blank">HAVE A DOUBT.</a>
+
+</body>
 </html>
